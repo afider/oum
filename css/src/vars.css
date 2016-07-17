@@ -30,6 +30,8 @@ $link-color_hover: color($main_color blackness(30%));
 $link-color_visited: #000;
 $link-border-color_alpha: 30%;
 
+$border_color: #b2b2b2;
+
 /* colors --- END --- */
 
 
@@ -37,13 +39,13 @@ $big-number: 9999px;
 
 
 
-$page_w: 1000px;
+$page_w: 1050px;
 $page_w_max: 1280px;
 $page_w_big: 1920px;
 
 $font_main: 'PT Serif', Verdana, Arial, sans-serif;
 
-$content_bot_space: 24px;
+$content_bot_space: 16px;
 
 $navigation_h: 100px;
 $navigation_w_sm: 60px;

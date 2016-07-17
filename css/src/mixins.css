@@ -1,6 +1,4 @@
 @define-mixin link_u $link-color, $link-color_hover {
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
 	border-bottom-color: color($link-color alpha($link-border-color_alpha));
 	color: $link-color;
 	&:hover,

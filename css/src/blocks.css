@@ -9,14 +9,40 @@
 	}
 
 	&__body{
-
+		&_bordered {
+		border-top: 1px solid $border_color;
+		padding-top: 25px;
+		}
 	}
 
 	&__section {
 		@mixin center;
 		@mixin space;
 		margin-bottom: 30px;
-		
+		&_columns {
+			display: flex;
+			@media screen and (width <= $mq_m_menu) {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__sidebar {
+		width: 20%;
+		box-sizing: border-box;
+		padding-right: 20px;
+		margin-bottom: 30px;
+		@media screen and (width <= $mq_m_menu) {
+			width: auto;
+		}
+	}
+
+	&__mainbar {
+		width: 80%;
+		box-sizing: border-box;
+		@media screen and (width <= $mq_m_menu) {
+			width: auto;
+		}
 	}
 
 	&__footer {
@@ -176,6 +202,7 @@
 		justify-content: center;
 		align-items: center;
 		line-height: 1.2;
+		border-bottom: none;
 		@media screen and (width <= $mq_m_menu) {
 			flex-direction: column;
 		}
@@ -490,22 +517,25 @@
 		&__i_h &__a &__txt {
 			border-bottom: none;
 			color: $main_color;
-			transition: color $animation-time, border-bottom-color $animation-time;
 		}
 
 		&__a {
 			padding: 3px 0;
 			display: block;
+			border-bottom: none;
 		}
 
 		&__a:hover &__txt {
-			transition: color $animation-time, border-bottom-color $animation-time;
+			
 			color: $link-color_hover;
 			border-bottom-color: color($link-color_hover alpha($link-border-color_alpha));
 		}
 
 		&__txt {
+			transition: color $animation-time, border-bottom-color $animation-time;
 			display: inline;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
 			@mixin link_u $text_color, $link-color_hover;
 		}
 	}
@@ -658,7 +688,6 @@ textarea.input {
 	@extend font-cyr;
 	transition: box-shadow $animation-time_slow, background $animation-time_slow;
 
-
 	@media screen and (width <= $mq_m_menu) {
 		display: table;
 		text-align: center;
@@ -790,6 +819,7 @@ textarea.input {
 		border-bottom: none;
 		padding: 8px 15px;
 		transition: background $animation-time, color $animation-time;
+		border-bottom: none;
 
 		@media screen and (width <= $mq_d_menu) {
 			padding: 8px 15px;
@@ -1105,6 +1135,7 @@ textarea.input {
 		right: 0;
 		left: 0;
 		display: block;
+		border-bottom: none;
 		&,
 		&:hover {
 			color: #fff;
@@ -1209,6 +1240,7 @@ textarea.input {
 		//background: red;
 		display: block;
 		//display: none;
+		border-bottom: none;
 
 		@media screen and (width <= $mq_sm) {
 			display: none;
@@ -1396,6 +1428,18 @@ textarea.input {
 	margin-right: -10px;
 	margin-bottom: -25px;
 	
+	&_two &__i {
+		width: calc(100%/2);
+		@media screen and (width <= $mq_sm) {
+			margin-bottom: 25px;
+			width: 100%;
+		}
+		@media screen and (width <= $mq_smr) {
+			margin-bottom: 25px;
+			width: 100%;
+		}
+	}
+
 	&__i {
 		width: calc(100%/3);
 		padding: 0 10px;
@@ -1407,13 +1451,13 @@ textarea.input {
 		}
 		@media screen and (width <= $mq_smr) {
 			margin-bottom: 25px;
-
 			width: 100%;
 		}
 	}
 
 	&__a {
 		display: block;
+		border-bottom: none;
 	}
 
 	&__img {
@@ -1461,6 +1505,228 @@ textarea.input {
 	
 /* section-link
 ------------------------------------------END--- */
+
+
+/*  nav-list
+------------------------------------------------ */
+
+	.nav-list {
+		$link-margin: 7px;
+		font-size: 14px;
+		@extend font-tahoma;
+		@media screen and (width <= $mq_m_menu) {
+			margin: 0 -$link-margin;
+			
+		}
+
+		&__lst {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		&__i {
+			margin: 0;
+			padding: 0;
+			display: block;
+
+			@media screen and (width <= $mq_m_menu) {
+				display: inline-block;
+
+			}
+		}
+
+		&__a {
+			display: inline-block;
+			border-bottom: none;
+			padding: 5px $link-margin;
+			margin: 3px;
+			line-height: 1.2;
+
+
+			.is-active > & {
+				background: $main_color;
+				
+			}
+		}
+		
+		&__i.is-active &__txt {
+			color: #fff;
+			border-bottom: none;
+		}
+
+		&__txt {
+			transition: color $animation-time, border-bottom-color $animation-time;
+			display: inline;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			@mixin link_u $text_color, $link-color_hover;
+		}
+	}
+	
+/* nav-list
+------------------------------------------END--- */
+
+
+/*  breadcrumbs
+------------------------------------------------ */
+
+	.breadcrumbs {
+		margin: 0 0 16px 0;
+		padding: 0;
+		list-style-type: none;
+		font-size: 12px;
+		@extend font-tahoma;
+
+		&__i {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			&:after {
+				content: '/';
+				display: inline-block;
+				margin: 0 0 0 7px;
+				
+			}
+		}
+	}
+	
+/* breadcrumbs
+------------------------------------------END--- */
+
+
+/*  columns
+------------------------------------------------ */
+
+	.columns {
+		display: flex;
+		width: 100%;
+
+		&__i {
+			box-sizing: border-box;
+			margin-bottom: $content_bot_space;
+		}
+		
+		&_two {
+			@media screen and (width <= $mq_m-less-more) {
+				display: block;
+			}
+		}
+
+		&_two &__i {
+			width: 50%;
+			@media screen and (width <= $mq_m-less-more) {
+				width: auto;
+				padding: 0 !important;
+			}
+			&:first-child {
+				padding-right: 10px;
+			}
+			&:last-child {
+				padding-left: 10px;
+			}
+		}
+
+	}
+	
+/* columns
+------------------------------------------END--- */
+
+
+/* table
+/* --------------------------------------------- */
+
+.table {
+	width: 100%;
+	margin-bottom: calc($content_bot_space * 2);
+	@extend font-tahoma;
+	font-size: 14px;
+
+	&.small-only {
+		display: none;
+		@media screen and (width <= $mq_sm) {
+			display: table;
+		}
+	}
+		
+
+	&.large-only {
+		@media screen and (width <= $mq_sm) {
+			display: none;
+		}
+	}
+
+	&.small-only {
+		border: 1px solid #dfdfdf;
+		margin-bottom: calc($content_bot_space * 2);
+
+		&:first-child {
+			display: none;
+		}
+
+		&:last-child {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__h td,
+	th,
+	thead th {
+		font-weight: bold;
+		font-style: italic;
+		text-align: left;
+		@extend font-r;
+		border-bottom: 2px solid $main_color;
+		padding: 0;
+	}
+
+	& tr:nth-child(even) {
+		td {
+			background: #f4f3f3;
+		}
+	}
+
+	& th,
+	& td {
+		vertical-align: middle;
+		padding: 8px;
+	}
+
+	&.small-only th,
+	&.small-only td {
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: left;
+	}
+
+	.st-key {
+		width: 40%;
+	}
+
+	.st-val {
+		width: 60%;
+	}
+
+	&.small-only {
+		
+		tr {
+			td {
+				background: #fff;	
+			}
+			&:first-child {
+				td {
+					@extend font-r;
+					font-style: italic;
+					font-weight: bold;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+/* table
+/* ---------------------------------------END--- */
 
 
 /* block

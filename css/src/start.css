@@ -34,7 +34,7 @@ ol li {
 /*  -------------------------------------------- */
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	margin: 40px 0 28px 0;
+	margin: 0;
 	padding: 0;
 	line-height: 1.3;
 	font-weight: normal;
@@ -50,6 +50,7 @@ h1, .h1 {
 
 h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: $main_color;
+	font-weight: bold;
 }
 
 h2, .h2 {
@@ -84,7 +85,8 @@ a {
 	transition: color $animation-time, border-bottom-color $animation-time;
 	text-decoration: none;
 	outline: none !important;
-	
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 	&:hover,
 	&:focus {
 		transition: color $animation-time_fast, border-bottom-color $animation-time_fast;
