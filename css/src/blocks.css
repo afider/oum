@@ -1633,6 +1633,22 @@ textarea.input {
 ------------------------------------------END--- */
 
 
+/*  scroll-x
+------------------------------------------------ */
+
+	.scroll-x {
+		display: block;
+		overflow-x: auto;
+		margin-bottom: calc($content_bot_space * 2);
+		& &__table {
+			margin-bottom: 0;
+		}
+	}
+	
+/* scroll-x
+------------------------------------------END--- */
+
+
 /* table
 /* --------------------------------------------- */
 

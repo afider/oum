@@ -2733,6 +2733,23 @@ textarea.input {
 ------------------------------------------END--- */
 
 
+/*  scroll-x
+------------------------------------------------ */
+
+	.scroll-x {
+		display: block;
+		overflow-x: auto;
+		margin-bottom: 32px
+	}
+
+	.scroll-x .scroll-x__table {
+  margin-bottom: 0;
+}
+	
+/* scroll-x
+------------------------------------------END--- */
+
+
 /* table
 /* --------------------------------------------- */
 
