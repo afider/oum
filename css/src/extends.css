@@ -1,0 +1,17 @@
+@define-extend font-r {
+	font-family: $font_main;
+}
+
+@define-extend font-cyr {
+	font-family: 'Cyrilic Old', $font_main;
+}
+
+@define-extend font-tahoma {
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+@define-extend trans {
+	background: color($main_color_light alpha(75%));
+}
+
+	
