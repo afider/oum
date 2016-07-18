@@ -291,7 +291,6 @@
 ------------------------------------------------ */
 
 	.auth-links {
-		text-align: center;
 		margin-bottom: 22px;
 		font-size: 12px;
 		line-height: 1.2;
@@ -313,6 +312,18 @@
 	}
 	
 /* auth-links
+------------------------------------------END--- */
+
+
+/*  small-cart
+------------------------------------------------ */
+
+	.small-cart {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	
+/* small-cart
 ------------------------------------------END--- */
 
 
@@ -642,7 +653,6 @@ textarea.input {
 
 .button {
 	user-select: none;
-
 	position: relative;
 	display: inline-block;
 	overflow: visible;
@@ -653,24 +663,43 @@ textarea.input {
 	cursor: pointer;
 	vertical-align: middle;
 	outline: none;
-	font-size: 22px;
-	text-transform: uppercase;
-	padding: 5px 24px;
+	font-size: 14px;
+	padding: 0 6px;
 	white-space: nowrap;
 	background-color: #fff;
-	border: 2px solid $main_color;
+	border: 1px solid $main_color;
 	box-sizing: border-box;
-	border-radius: 2px;
-	transition: border-color $animation-time, color $animation-time;
+	border-radius: 3px;
+	transition: background $animation-time, color $animation-time;
 	transition-timing-function: ease-out;
+	height: 28px;
+	line-height: 28px;
 
 	&:hover {
-		color: $second_color !important;
-		border-color: $second_color;
+		background: $main_color;
+		transition: background $animation-time, color $animation-time;
+		color: #fff !important;
 	}
 
 	&:active {
+		line-height: 29px;
 		box-shadow: inset 0px 3px 7px color(#000 alpha(20%));
+	}
+
+	&_disabled {
+		border-color: $text_color_light;
+		color: $text_color_light !important;
+		background: #fff;
+
+		&:hover {
+			background: #fff !important;
+			color: $text_color_light !important;
+		}
+
+		&:active {
+			line-height: 28px;
+			box-shadow: none;
+		}
 	}
 }
 
@@ -1512,17 +1541,33 @@ textarea.input {
 
 	.nav-list {
 		$link-margin: 7px;
-		font-size: 14px;
+		font-size: 13px;
 		@extend font-tahoma;
 		@media screen and (width <= $mq_m_menu) {
 			margin: 0 -$link-margin;
 			
 		}
 
+		&__separator {
+			height: 1px;
+			background: $border_color;
+			margin: 28px 0;
+		}
+
 		&__lst {
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
+
+			&_sub {
+				margin-left: 10px;
+				@media screen and (width <= $mq_m_menu) {
+					border: 1px solid $border_color;
+					margin-bottom: 10px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+			}
 		}
 
 		&__i {
@@ -1535,7 +1580,9 @@ textarea.input {
 
 			}
 		}
-
+		&_no-bordered &__txt {
+			border-bottom: none;
+		}
 		&__a {
 			display: inline-block;
 			border-bottom: none;
@@ -1742,6 +1789,141 @@ textarea.input {
 }
 
 /* table
+/* ---------------------------------------END--- */
+
+
+/*  catalog
+------------------------------------------------ */
+
+	.catalog {
+		$left-margin: 64px;
+
+		@extend font-tahoma;
+		font-size: 12px;
+		margin-bottom: 10px;
+		
+		&__body {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -$left-margin;
+
+		}
+
+		&__i {
+			width: 146px;
+			margin-left: $left-margin;
+			margin-bottom: 30px;
+		}
+
+		&__a {
+			border-bottom: none;
+			display: block;
+		}
+
+		&__photo {
+			margin: auto;
+			width: 123px;
+			height: 173px;
+			margin-bottom: 24px;
+		}
+
+		&__img {
+			display: block;
+			max-height: 100%;
+			width: auto;
+		}
+
+		&__legend {
+			color: $text_color
+		}
+
+		&__a:hover &__title {
+			color: $link-color_hover;
+			border-bottom-color: color($link-color_hover alpha($link-border-color_alpha));
+		}
+
+		&__title {
+			transition: color $animation-time, border-bottom-color $animation-time;
+			display: inline;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			@mixin link_u $link-color, $link-color_hover;
+		}
+		
+		&__button {
+			margin-right: 3px;
+		}
+
+		&__footer {
+			padding-top: 10px;
+			display: flex;
+		}
+
+		&__footer-button {
+			padding-right: 3px;
+			width: 1px;
+		}
+
+		&__footer-price {
+			text-align: right;
+			height: 26px;
+			line-height: 26px;
+			width: 100%;
+		}
+
+		&__price {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&__price-num {
+			font-weight: bold;
+		}
+	}
+	
+/* catalog
+------------------------------------------END--- */
+
+
+/* page-nav
+/* --------------------------------------------- */
+
+.page-nav {
+	margin-bottom: $content_bot_space;
+	font-size: 12px;
+
+	&__lst {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+		
+	&__i {
+		margin: 0 6px;
+		padding: 0;
+		display: inline-block;
+	}
+		
+	&__a {
+		display: block;
+		border-radius: 50%;
+		box-sizing: border-box;
+		border: 1px solid $main_color;
+		min-width: 28px;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		transition: color $animation-time, border-color $animation-time;
+		&:hover {
+			border-color: $link-color_hover;
+			}
+		.is-active > & {
+			border-color: $main_color;
+		}
+	}	
+}
+
+/* page-nav
 /* ---------------------------------------END--- */
 
 
