@@ -1927,6 +1927,67 @@ textarea.input {
 /* ---------------------------------------END--- */
 
 
+/*  section-teasers
+------------------------------------------------ */
+
+	.section-teasers {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		@extend font-tahoma;
+		font-size: 14px;
+		line-height: 1.2;
+
+		&__i {
+			width: calc(100% / 4);
+			margin-bottom: 30px;
+			padding: 0 10px;
+			box-sizing: border-box;
+			@media screen and (width <= $mq_sm) {
+				width: calc(100% / 3);
+			}
+			@media screen and (width <= $mq_smr) {
+				width: calc(100% / 2);
+			}
+			@media screen and (width <= $mq_smst) {
+				width: auto;
+			}
+		}
+
+		&__a {
+			border-bottom: none;
+		}
+
+		&__img {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		&__title-wrap {
+			&_center {
+				text-align: center;
+			}
+		}
+
+		&__a:hover &__title {
+			color: $link-color_hover;
+			border-bottom-color: color($link-color_hover alpha($link-border-color_alpha));
+		}
+
+		&__title {
+			text-align: center;
+			transition: color $animation-time, border-bottom-color $animation-time;
+			display: inline;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			@mixin link_u $link-color, $link-color_hover;
+		}
+	}
+	
+/* section-teasers
+------------------------------------------END--- */
+
+
 /* block
 ------------------------------------------------
 	

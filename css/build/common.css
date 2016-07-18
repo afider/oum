@@ -401,7 +401,7 @@ h1, .h1, .font-cyr, .logo__location, .contacts__h, .main-nav, .trans-button {
 	font-family: 'Cyrilic Old', 'PT Serif',Verdana,Arial,sans-serif;
 }
 
-.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .nav-list, .breadcrumbs, .table, .catalog {
+.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .nav-list, .breadcrumbs, .table, .catalog, .section-teasers {
 	font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 
@@ -3044,6 +3044,90 @@ textarea.input {
 
 /* page-nav
 /* ---------------------------------------END--- */
+
+
+/*  section-teasers
+------------------------------------------------ */
+
+	.section-teasers {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		margin: 0 -10px;
+		font-size: 14px;
+		font-size: 0.875rem;
+		line-height: 1.2
+	}
+
+	.section-teasers__i {
+  width: 25%;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+	@media screen and (max-width: 700px) {
+
+  .section-teasers__i {
+    width: 33.33333%;
+  }
+}
+
+	@media screen and (max-width: 500px) {
+
+  .section-teasers__i {
+    width: 50%;
+  }
+}
+
+	@media screen and (max-width: 340px) {
+
+  .section-teasers__i {
+    width: auto;
+  }
+}
+
+	.section-teasers__a {
+  border-bottom: none;
+}
+
+	.section-teasers__img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+	.section-teasers__title-wrap {
+	}
+
+	.section-teasers__title-wrap_center {
+  text-align: center;
+}
+
+	.section-teasers__a:hover .section-teasers__title {
+  color: rgb(179, 89, 54);
+  border-bottom-color: rgba(179, 89, 54, 0.3);
+}
+
+	.section-teasers__title {
+  text-align: center;
+  -webkit-transition: color .3s, border-bottom-color .3s;
+  transition: color .3s, border-bottom-color .3s;
+  display: inline;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(242, 108, 54, 0.3);
+  color: #f26c36;
+}
+
+	.section-teasers__title:hover, .section-teasers__title:focus {
+  border-bottom-color: rgba(179, 89, 54, 0.3);
+  color: rgb(179, 89, 54);
+}
+	
+/* section-teasers
+------------------------------------------END--- */
 
 
 /* block
