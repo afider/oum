@@ -401,7 +401,7 @@ h1, .h1, .font-cyr, .logo__location, .contacts__h, .main-nav, .trans-button {
 	font-family: 'Cyrilic Old', 'PT Serif',Verdana,Arial,sans-serif;
 }
 
-.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .button, .nav-list, .breadcrumbs, .table, .catalog, .section-teasers, .product-legend__price, .select__item .select__bg, select.select.replaced {
+.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .input, .button, .nav-list, .breadcrumbs, .table, .catalog, .section-teasers, .product-legend__price, .select__item .select__bg, select.select.replaced {
 	font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 
@@ -1497,20 +1497,30 @@ textarea.input {
 }
 
 .input {
-	width: 300px;
-	height: 40px;
+	width: 290px;
+	height: 28px;
 	background: #fff;
 	color: #666;
 	padding: 0 10px;
-	font-size: 16px;
-	font-size: 1rem;
-	box-sizing: border-box;
-	-webkit-transition: box-shadow .3s, border-color .3s;
-	transition: box-shadow .3s, border-color .3s;
-	border: 2px solid #99cccc
-	
-
+	font-size: 14px;
+	font-size: 0.875rem;
+	-webkit-transition-property: box-shadow, border-color;
+	transition-property: box-shadow, border-color;
+	border: 1px solid #b2b2b2;
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
+	box-sizing: border-box
 }
+
+@media screen and (max-width: 600px) {
+
+  .input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+	}
 
 .input_w_fluid {
   width: 100%;
@@ -1524,13 +1534,6 @@ textarea.input {
   outline: 0 !important;
   box-shadow: 0 0 10px #fcc504;
 }
-
-@media screen and (max-width: 500px) {
-
-  .input {
-    width: 100%;
-  }
-	}
 
 /* input
 /* ---------------------------------------END--- */
@@ -3385,6 +3388,188 @@ textarea.input {
 
 /*  select
 ---------------------------------------------end--- */
+
+
+/*  event
+------------------------------------------------ */
+
+	.event {
+		font-size: 14px;
+		font-size: 0.875rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex
+
+
+	}
+
+	@media screen and (max-width: 600px) {
+
+  .event {
+    display: block;
+  }
+		}
+
+	.event__photo {
+  margin-bottom: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 12px;
+}
+
+	@media screen and (max-width: 600px) {
+
+  .event__photo {
+    width: auto;
+    padding-right: 0;
+  }
+}
+
+	.event__photo-inner {
+  display: inline-block;
+}
+
+	.event__desc {
+  margin-bottom: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 12px;
+}
+
+	@media screen and (max-width: 600px) {
+
+  .event__desc {
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+	.event__label {
+  display: block;
+  font-weight: bold;
+}
+
+	.event__line {
+  display: block;
+}
+
+	.event__legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: #f26c36;
+  padding: 12px 16px;
+}
+
+	@media screen and (max-width: 870px) {
+
+  .event__legend {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+	.event__img {
+  display: block;
+}
+
+	.event__date {
+  color: #333;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+	.event__location {
+  text-align: right;
+  color: #fff;
+  margin-left: auto;
+}
+	
+/* event
+------------------------------------------END--- */
+
+
+/*  separator
+------------------------------------------------ */
+
+	.separator {
+		height: 1px;
+		background: #b2b2b2;
+		margin: 26px 0;
+	}
+	
+/* separator
+------------------------------------------END--- */
+
+/*  required
+------------------------------------------------ */
+
+	.required {
+		color: #f26c36;
+	}
+	
+/* required
+------------------------------------------END--- */
+
+
+/*  label
+------------------------------------------------ */
+
+	.label {
+		display: block
+	}
+
+	.label_width_same {
+  display: inline-block;
+  width: 130px;
+  box-sizing: border-box;
+  padding-right: 14px;
+  line-height: 1.2;
+  text-align: right;
+}
+
+	@media screen and (max-width: 600px) {
+
+  .label_width_same {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+	.label_valign_top {
+  vertical-align: top;
+}
+	
+/* label
+------------------------------------------END--- */
+
+
+/*  form-line
+------------------------------------------------ */
+
+	.form-line {
+		margin-bottom: 19px
+	}
+
+	.form-line_actions {
+  padding-left: 130px;
+  width: 294px;
+  text-align: right;
+}
+
+	@media screen and (max-width: 600px) {
+
+  .form-line {
+    width: auto;
+    padding-left: 0;
+  }
+		}
+	
+/* form-line
+------------------------------------------END--- */
 
 
 /* block
