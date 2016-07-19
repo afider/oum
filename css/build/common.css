@@ -1118,7 +1118,24 @@ input:-ms-input-placeholder {
 	.small-cart {
 		padding-top: 5px;
 		padding-bottom: 5px;
+		position: relative;
+		padding-left: 27px
 	}
+
+	.small-cart__icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+	@media screen and (max-width: 1024px) {
+
+  .small-cart__icon {
+    top: 5px;
+  }
+}
 	
 /* small-cart
 ------------------------------------------END--- */
@@ -3410,8 +3427,18 @@ textarea.input {
   }
 		}
 
+	.event_width-legend_more {
+	}
+
+	@media screen and (max-width: 700px) {
+
+  .event_width-legend_more {
+    display: block;
+  }
+}
+
 	.event__photo {
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   width: 50%;
   box-sizing: border-box;
   padding-right: 12px;
@@ -3430,7 +3457,7 @@ textarea.input {
 }
 
 	.event__desc {
-  margin-bottom: 16px;
+  margin-bottom: 26px;
   width: 50%;
   box-sizing: border-box;
   padding-left: 12px;
@@ -3439,6 +3466,30 @@ textarea.input {
 	@media screen and (max-width: 600px) {
 
   .event__desc {
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+	.event_width-legend_more .event__photo {
+  width: 40%;
+}
+
+	@media screen and (max-width: 700px) {
+
+  .event_width-legend_more .event__photo {
+    width: auto;
+    padding-right: 0;
+  }
+}
+
+	.event_width-legend_more .event__desc {
+  width: 60%;
+}
+
+	@media screen and (max-width: 700px) {
+
+  .event_width-legend_more .event__desc {
     width: auto;
     padding-left: 0;
   }
@@ -3498,8 +3549,12 @@ textarea.input {
 	.separator {
 		height: 1px;
 		background: #b2b2b2;
-		margin: 26px 0;
+		margin: 26px 0
 	}
+
+	.separator_space-top_none {
+  margin-top: 0;
+}
 	
 /* separator
 ------------------------------------------END--- */
@@ -3569,6 +3624,40 @@ textarea.input {
 		}
 	
 /* form-line
+------------------------------------------END--- */
+
+
+/*  cite
+------------------------------------------------ */
+
+	.cite {
+		font-size: 14px;
+		font-size: 0.875rem;
+		text-align: right;
+		font-style: italic;
+		margin-bottom: 22px
+	}
+
+	.cite__author {
+  font-weight: bold;
+  display: block;
+}
+	
+/* cite
+------------------------------------------END--- */
+
+
+/*  skype-icon
+------------------------------------------------ */
+
+	.skype-icon {
+		width: 17px;
+		height: 17px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+/* skype-icon
 ------------------------------------------END--- */
 
 

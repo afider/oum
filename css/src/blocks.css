@@ -319,8 +319,22 @@
 ------------------------------------------------ */
 
 	.small-cart {
+		$cartIcon_dim: 20px;
 		padding-top: 5px;
 		padding-bottom: 5px;
+		position: relative;
+		padding-left: calc($cartIcon_dim + 7);
+
+		&__icon {
+			width: $cartIcon_dim;
+			height: $cartIcon_dim;
+			position: absolute;
+			top: 2px;
+			left: 0;
+			@media screen and (width <= $mq_m) {
+				top: 5px;
+			}
+		}
 	}
 	
 /* small-cart
@@ -2227,8 +2241,15 @@ textarea.input {
 		@media screen and (width <= $event_sm) {
 			display: block;
 		}
+
+		&_width-legend_more {
+			@media screen and (width <= $event_sm-wide) {
+				display: block;
+			}
+		}
+
 		&__photo {
-			margin-bottom: $content_bot_space;
+			margin-bottom: calc($content_bot_space + 10);
 			width: 50%;
 			box-sizing: border-box;
 			padding-right: 12px;
@@ -2243,11 +2264,28 @@ textarea.input {
 		}
 
 		&__desc {
-			margin-bottom: $content_bot_space;
+			margin-bottom: calc($content_bot_space + 10);
 			width: 50%;
 			box-sizing: border-box;
 			padding-left: 12px;
 			@media screen and (width <= $event_sm) {
+				width: auto;
+				padding-left: 0;
+			}
+		}
+		
+
+		&_width-legend_more &__photo {
+			width: 40%;
+			@media screen and (width <= $event_sm-wide) {
+				width: auto;
+				padding-right: 0;
+			}
+		}
+
+		&_width-legend_more &__desc {
+			width: 60%;
+			@media screen and (width <= $event_sm-wide) {
 				width: auto;
 				padding-left: 0;
 			}
@@ -2304,6 +2342,10 @@ textarea.input {
 		height: 1px;
 		background: $border_color;
 		margin: calc($content_bot_space + 10) 0;
+
+		&_space-top_none {
+			margin-top: 0;
+		}
 	}
 	
 /* separator
@@ -2364,6 +2406,39 @@ textarea.input {
 	}
 	
 /* form-line
+------------------------------------------END--- */
+
+
+/*  cite
+------------------------------------------------ */
+
+	.cite {
+		font-size: 14px;
+		text-align: right;
+		font-style: italic;
+		margin-bottom: 22px;
+
+		&__author {
+			font-weight: bold;
+			display: block;
+		}
+	}
+	
+/* cite
+------------------------------------------END--- */
+
+
+/*  skype-icon
+------------------------------------------------ */
+
+	.skype-icon {
+		width: 17px;
+		height: 17px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+/* skype-icon
 ------------------------------------------END--- */
 
 
