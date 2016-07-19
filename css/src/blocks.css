@@ -652,6 +652,7 @@ textarea.input {
 /* --------------------------------------------- */
 
 .button {
+	@extend font-tahoma;
 	user-select: none;
 	position: relative;
 	display: inline-block;
@@ -664,17 +665,14 @@ textarea.input {
 	vertical-align: middle;
 	outline: none;
 	font-size: 14px;
-	padding: 0 6px;
-	white-space: nowrap;
+	padding: 3px 6px;
 	background-color: #fff;
 	border: 1px solid $main_color;
 	box-sizing: border-box;
 	border-radius: 3px;
 	transition: background $animation-time, color $animation-time;
 	transition-timing-function: ease-out;
-	height: 28px;
-	line-height: 28px;
-
+	
 	&:hover {
 		background: $main_color;
 		transition: background $animation-time, color $animation-time;
@@ -1852,6 +1850,7 @@ textarea.input {
 		
 		&__button {
 			margin-right: 3px;
+			white-space: nowrap;
 		}
 
 		&__footer {
@@ -1986,6 +1985,235 @@ textarea.input {
 	
 /* section-teasers
 ------------------------------------------END--- */
+
+
+/*  product
+------------------------------------------------ */
+
+	.product {
+		margin-bottom: 35px;
+
+		&__parts {
+			display: flex;
+			@media screen and (width <= $mq_m-less-more) {
+				display: block;
+			}
+		}
+		&__gallery,
+		&__legend {
+			width: 50%;
+			@media screen and (width <= $mq_m-less-more) {
+				width: auto;
+			}
+		}
+
+		&__gallery {
+			
+		}
+
+		&__legend {
+			padding-left: 10%;
+			@media screen and (width <= $mq_m-less-more) {
+				padding-left: 0;
+				padding-top: 30px;
+			}
+		}
+
+		&__parts {
+			margin-bottom: 35px;
+		}
+	}
+	
+/* product
+------------------------------------------END--- */
+
+
+/*  gallery
+------------------------------------------------ */
+
+	.gallery {
+		display: flex;
+		&__thumbs-list {
+			width: 117px;
+		}
+		&__photo {
+			
+		}
+		&__thumb {
+			border: 1px solid #b2b2b2;
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin-bottom: 5px;
+			margin-right: 5px;
+		}
+		&__thumb-img {
+			display: block;
+			width: auto;
+			height: 100%;
+			margin: auto;
+		}
+		&__img {
+			display: block;
+		}
+	}
+	
+/* gallery
+------------------------------------------END--- */
+
+
+/*  product-legend
+------------------------------------------------ */
+
+	.product-legend {
+		font-size: 14px;
+
+		&__header {
+			text-align: right;
+			margin-bottom: 20px;
+			@media screen and (width <= $mq_m-less-more) {
+				text-align: left;
+			}
+		}
+
+		&__price {
+			display: inline-block;
+			margin-right: 20px;
+			@extend font-tahoma;
+		}
+
+		&__price-num {
+			font-weight: bold;
+		}
+
+		&__select {
+			width: 50px !important;
+		}
+
+		&__label {
+			display: inline-block;
+			padding-right: 10px;
+		}
+
+		&__action {
+			text-align: right;
+			margin-bottom: 30px;
+			@media screen and (width <= $mq_m-less-more) {
+				text-align: left;
+			}
+		}
+
+		&__prop-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			
+		}
+
+		&__prop {
+			margin: 0 0 5px 0;
+			padding: 0;
+			display: flex;
+		}
+
+		&__prop-h {
+			width: 170px;
+			box-sizing: border-box;
+			padding-right: 15px;
+			font-weight: bold;
+			line-height: 1.2;
+		}
+
+		&__prop-val {
+			width: 100%;
+			line-height: 1.2;
+		}
+	}
+	
+/* product-legend
+------------------------------------------END--- */
+
+
+/*  select
+--------------------------------------------------- */
+
+	.select {
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		width: 220px;
+
+		&__container {
+			position: relative;
+			display: inline-block;
+			margin-right: 3px;
+			}
+
+		&__item {
+			color: #000;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			display: inline-block;
+			font-size: 13px;
+			width: 100%;
+			}
+
+		&__item &__bg {
+			display: block;
+			padding: 0 25px 0 7px;
+			line-height: 26px;
+			height: 26px;
+			border: 1px solid #dadada;
+			border-radius: 3px;
+			background: #fff;
+			@extend font-tahoma;
+			font-size: 12px;
+
+			span {
+				display: block;
+				overflow: hidden;
+				height: 27px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				}
+			}
+
+		&__arrow {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -2px;
+			width: 9px;
+			height: 5px;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 7px 5px 0 5px;
+				border-color: $main_color transparent transparent transparent;
+				}
+			}
+	}
+	
+	select.select.replaced {
+		position: relative;
+		z-index: 10;
+		height: 28px;
+		border: 0;
+		opacity: 0;
+		@extend font-tahoma;
+		font-size: 12px;
+		}
+
+/*  select
+---------------------------------------------end--- */
 
 
 /* block

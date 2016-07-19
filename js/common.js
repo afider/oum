@@ -6,6 +6,7 @@ $(function() {
 	animateNavigation ();
 	goToElement ();
 	detectIfScroll();
+	initCustomSelect ();
 
 	// инициализация плагина для адаптивных таблиц
 	$('.table_responsive').cardtable();
@@ -32,6 +33,12 @@ $(function() {
 	};
 
 });
+
+
+function initCustomSelect () {
+
+	$('.js-select').customSelect();
+} // initCustomSelect ()
 
 
 function detectIfScroll () {

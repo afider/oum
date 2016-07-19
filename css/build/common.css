@@ -401,7 +401,7 @@ h1, .h1, .font-cyr, .logo__location, .contacts__h, .main-nav, .trans-button {
 	font-family: 'Cyrilic Old', 'PT Serif',Verdana,Arial,sans-serif;
 }
 
-.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .nav-list, .breadcrumbs, .table, .catalog, .section-teasers {
+.header-cols__i_first, .auth-links, .small-search__input, .copyright, .colls-nav, .button, .nav-list, .breadcrumbs, .table, .catalog, .section-teasers, .product-legend__price, .select__item .select__bg, select.select.replaced {
 	font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 
@@ -1556,8 +1556,7 @@ textarea.input {
 	outline: none;
 	font-size: 14px;
 	font-size: 0.875rem;
-	padding: 0 6px;
-	white-space: nowrap;
+	padding: 3px 6px;
 	background-color: #fff;
 	border: 1px solid #f26c36;
 	box-sizing: border-box;
@@ -1565,10 +1564,7 @@ textarea.input {
 	-webkit-transition: background .3s, color .3s;
 	transition: background .3s, color .3s;
 	-webkit-transition-timing-function: ease-out;
-	        transition-timing-function: ease-out;
-	height: 28px;
-	line-height: 28px;
-	line-height: 1.75rem
+	        transition-timing-function: ease-out
 }
 
 .button:hover {
@@ -2964,6 +2960,7 @@ textarea.input {
 
 	.catalog__button {
   margin-right: 3px;
+  white-space: nowrap;
 }
 
 	.catalog__footer {
@@ -3128,6 +3125,266 @@ textarea.input {
 	
 /* section-teasers
 ------------------------------------------END--- */
+
+
+/*  product
+------------------------------------------------ */
+
+	.product {
+		margin-bottom: 35px
+	}
+
+	.product__parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+	@media screen and (max-width: 800px) {
+
+  .product__parts {
+    display: block;
+  }
+}
+
+	.product__gallery, .product__legend {
+  width: 50%;
+}
+
+	@media screen and (max-width: 800px) {
+
+  .product__gallery, .product__legend {
+    width: auto;
+  }
+}
+
+	.product__gallery {
+	}
+
+	.product__legend {
+  padding-left: 10%;
+}
+
+	@media screen and (max-width: 800px) {
+
+  .product__legend {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+}
+
+	.product__parts {
+  margin-bottom: 35px;
+}
+	
+/* product
+------------------------------------------END--- */
+
+
+/*  gallery
+------------------------------------------------ */
+
+	.gallery {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex
+	}
+
+	.gallery__thumbs-list {
+  width: 117px;
+}
+
+	.gallery__photo {
+	}
+
+	.gallery__thumb {
+  border: 1px solid #b2b2b2;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+	.gallery__thumb-img {
+  display: block;
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+	.gallery__img {
+  display: block;
+}
+	
+/* gallery
+------------------------------------------END--- */
+
+
+/*  product-legend
+------------------------------------------------ */
+
+	.product-legend {
+		font-size: 14px;
+		font-size: 0.875rem
+	}
+
+	.product-legend__header {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+	@media screen and (max-width: 800px) {
+
+  .product-legend__header {
+    text-align: left;
+  }
+}
+
+	.product-legend__price {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+	.product-legend__price-num {
+  font-weight: bold;
+}
+
+	.product-legend__select {
+  width: 50px !important;
+}
+
+	.product-legend__label {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+	.product-legend__action {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+	@media screen and (max-width: 800px) {
+
+  .product-legend__action {
+    text-align: left;
+  }
+}
+
+	.product-legend__prop-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+	.product-legend__prop {
+  margin: 0 0 5px 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+	.product-legend__prop-h {
+  width: 170px;
+  box-sizing: border-box;
+  padding-right: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+	.product-legend__prop-val {
+  width: 100%;
+  line-height: 1.2;
+}
+	
+/* product-legend
+------------------------------------------END--- */
+
+
+/*  select
+--------------------------------------------------- */
+
+	.select {
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		width: 220px
+	}
+
+	.select__container {
+  position: relative;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+	.select__item {
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: inline-block;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  width: 100%;
+}
+
+	.select__item .select__bg {
+  display: block;
+  padding: 0 25px 0 7px;
+  line-height: 26px;
+  line-height: 1.625rem;
+  height: 26px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  background: #fff;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+	.select__item .select__bg span {
+  display: block;
+  overflow: hidden;
+  height: 27px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+	.select__arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -2px;
+  width: 9px;
+  height: 5px;
+}
+
+	.select__arrow:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #f26c36 transparent transparent transparent;
+}
+	
+	select.select.replaced {
+		position: relative;
+		z-index: 10;
+		height: 28px;
+		border: 0;
+		opacity: 0;
+		font-size: 12px;
+		font-size: 0.75rem;
+		}
+
+/*  select
+---------------------------------------------end--- */
 
 
 /* block
