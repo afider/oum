@@ -702,7 +702,6 @@ textarea.input {
 	}
 
 	&:active {
-		line-height: 29px;
 		box-shadow: inset 0px 3px 7px color(#000 alpha(20%));
 	}
 
@@ -717,7 +716,6 @@ textarea.input {
 		}
 
 		&:active {
-			line-height: 28px;
 			box-shadow: none;
 		}
 	}
@@ -1475,7 +1473,10 @@ textarea.input {
 	flex-wrap: wrap;
 	margin-left: -10px;
 	margin-right: -10px;
-	margin-bottom: -25px;
+
+	&_space-bottom_none {
+		margin-bottom: -25px;
+	}
 	
 	&_two &__i {
 		width: calc(100%/2);
@@ -1990,6 +1991,7 @@ textarea.input {
 
 		&__img {
 			display: block;
+			margin: auto;
 			margin-bottom: 10px;
 		}
 
@@ -2011,6 +2013,11 @@ textarea.input {
 			border-bottom-width: 1px;
 			border-bottom-style: solid;
 			@mixin link_u $link-color, $link-color_hover;
+		}
+
+		&__date {
+			color: $text_color;
+			margin-bottom: 5px;
 		}
 	}
 	
@@ -2533,6 +2540,32 @@ textarea.input {
 	
 /* content-img
 ------------------------------------------END--- */
+
+
+/* video
+/* --------------------------------------------- */
+
+.video {
+	margin-bottom: 35px;
+	&__body {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+		margin-bottom: 10px;
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+		
+
+/* video
+/* ---------------------------------------END--- */
 
 
 /* block
