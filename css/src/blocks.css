@@ -35,6 +35,12 @@
 		@media screen and (width <= $mq_m_menu) {
 			width: auto;
 		}
+
+		&_empty {
+			margin: 0;
+			padding: 0;
+			
+		}
 	}
 
 	&__mainbar {
@@ -2242,10 +2248,18 @@ textarea.input {
 			display: block;
 		}
 
+		&_space-bottom_none {
+			margin-bottom: calc(-($content_bot_space + 10));
+		}
+
 		&_width-legend_more {
 			@media screen and (width <= $event_sm-wide) {
 				display: block;
 			}
+		}
+
+		&_space_top {
+			margin-top: 35px;
 		}
 
 		&__photo {
@@ -2332,6 +2346,21 @@ textarea.input {
 	}
 	
 /* event
+------------------------------------------END--- */
+
+
+/*  map
+------------------------------------------------ */
+
+	.map {
+		border-top: 1px solid $border_color;
+		border-bottom: 1px solid $border_color;
+		&_space_bottom {
+			margin-bottom: 40px;
+		}
+	}
+	
+/* map
 ------------------------------------------END--- */
 
 

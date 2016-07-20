@@ -667,6 +667,11 @@ input:-ms-input-placeholder {
   }
 }
 
+.page__sidebar_empty {
+  margin: 0;
+  padding: 0;
+}
+
 .page__mainbar {
   width: 80%;
   box-sizing: border-box;
@@ -3427,6 +3432,10 @@ textarea.input {
   }
 		}
 
+	.event_space-bottom_none {
+  margin-bottom: -26px;
+}
+
 	.event_width-legend_more {
 	}
 
@@ -3435,6 +3444,10 @@ textarea.input {
   .event_width-legend_more {
     display: block;
   }
+}
+
+	.event_space_top {
+  margin-top: 35px;
 }
 
 	.event__photo {
@@ -3540,6 +3553,22 @@ textarea.input {
 }
 	
 /* event
+------------------------------------------END--- */
+
+
+/*  map
+------------------------------------------------ */
+
+	.map {
+		border-top: 1px solid #b2b2b2;
+		border-bottom: 1px solid #b2b2b2
+	}
+
+	.map_space_bottom {
+  margin-bottom: 40px;
+}
+	
+/* map
 ------------------------------------------END--- */
 
 

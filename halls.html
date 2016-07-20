@@ -96,199 +96,174 @@
 						
 						<div class="nav-list">
 							<ul class="nav-list__lst">
-								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Йога-туры</div></a></li>
-								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Семинары</div></a></li>
-								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Другие мероприятия</div></a></li>
+								<li class="nav-list__i is-active"><a href="#" class="nav-list__a"><div class="nav-list__txt">Наши залы</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Расписание занятий</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Индивидуальные занятия</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Интенсивная практика</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Йога для начинающих</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Утренние занятия</div></a></li>
+								<li class="nav-list__i"><a href="#" class="nav-list__a"><div class="nav-list__txt">Основная группа</div></a></li>
 							</ul>
 						</div>
+						
 					</div>
 					<div class="page__mainbar">
 
 						<ul class="breadcrumbs">
 							<li class="breadcrumbs__i"><a href="#" class="breadcrumbs__a">Главная</a></li>
+							<li class="breadcrumbs__i"><a href="#" class="breadcrumbs__a">Занятия</a></li>
 						</ul>
 
-						<h1>Мероприятия</h1>
+						<h1>Наши залы</h1>
 
-						<p>Приглашаем вас на наши мероприятия: йога-туры, семинары и другие. Наши мероприятия отличает стремление к здравому образу жизни.</p>
+						<p>Если вы хотели бы предложить свой зал для наших занятий, пожалуйста, обращайтесь по адресу: <a href="mailto:info@nsk-oum.ru">info@nsk-oum.ru</a>. Здесь текстовое поле, которое не выводится, если не заполнено.</p>
+
+						<div class="event event_space_top event_space-bottom_none">
+							<div class="event__photo">
+								<div class="event__photo-inner">
+									<img src="img/content/halls/hall-1.jpg" height="341" width="377" alt="" class="event__img">
+								</div>
+							</div>
+							<div class="event__desc">
+								<h2>Зал на улице Бориса Богаткова</h2>
+
+								<p>Новосибирск, ул.Бориса Богаткова, 53<br>
+									Клуб OUM.RU<br>
+									+7 (383) 123-45-67</p>
+
+								<p>
+									Метро Октябрьская Выйти из метро, повернуть налево и перейти дорогу на светофоре. Далее идти прямо до вывески Клуб OUM.RU.
+								</p>
+
+							</div>
+						</div>
 	
 					</div>
 				</div>
 
-				<div class="bg-section" style="background-image: url(img/section-3.jpg)">
-					<div class="bg-section__body">
-						<div class="trans-button trans-button_bg">
-							<div class="trans-button__txt">Йога-туры</div>
-						</div>
+				<div class="map">
+					<div class="map__body">
+						<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+						<div id="map" style="width: 100%; height: 400px"></div>
+						<script type="text/javascript">
+						    ymaps.ready(init);
+						    var myMap;
+						
+						    function init(){     
+						        myMap = new ymaps.Map ("map", {
+						            center: [61.00416525207393,69.04860899999996],
+						            zoom: 16
+						        }),
+									
+							    myMap.controls
+							        // Кнопка изменения масштаба.
+							       .add('zoomControl', { left: 5, top: 5 })
+							        // Список типов карты
+							       .add('typeSelector', { right: 100, top: 5 })
+							        // Стандартный набор кнопок
+							       .add('mapTools', { left: 35, top: 5 }),
+									
+						        myPlacemark2 = new ymaps.Placemark([61.00416525207393,69.04860899999996], {
+						            // Свойства.
+						            hintContent: 'ул. Чехова 67'
+						        }, {
+						            // Опции.
+						            //Своё изображение иконки метки.
+						            iconImageHref: 'img/map-icon.png',
+						            //Размеры метки.
+						            iconImageSize: [39, 38],
+						            //Смещение левого верхнего угла иконки относительно
+						            //её "ножки" (точки привязки).
+						            iconImageOffset: [0, 0]
+						        });
+									
+							    // Добавляем все метки на карту.
+							    myMap.geoObjects
+							        .add(myPlacemark2)
+									
+						    }
+						</script>
 					</div>
 				</div>
 
-				<div class="page__section">
 
-					<div class="event event_width-legend_more event_space-bottom_none">
-						<div class="event__photo">
-							<div class="event__photo-inner">
-								<img src="img/content/events/event-2.jpg" height="341" width="377" alt="" class="event__img">
-								<div class="event__legend">
-									<div class="event__date">16.07-30.08.2016</div>
-									<div class="event__location">Байкал</div>
+				<div class="page__section page__section_columns">
+					
+					<div class="page__sidebar page__sidebar_empty">
+						
+					
+					</div>
+					<div class="page__mainbar">
+
+						<div class="event event_space_top event_space-bottom_none">
+							<div class="event__photo">
+								<div class="event__photo-inner">
+									<img src="img/content/halls/hall-2.jpg" height="341" width="377" alt="" class="event__img">
 								</div>
 							</div>
-						</div>
-						<div class="event__desc">
-							<h2>Йога-тур на Байкал</h2>
+							<div class="event__desc">
+								<h2>Зал Красный проспект</h2>
 
-							<p>Мы приглашаем вас в путешествие на Байкал к самому чистому озеру на планете. Согласно древним легендам, именно здесь принимают омовение Боги, спускающиеся на Землю. Даже тот, кто никогда не слышал о существовании тонкого мира, о Богах, наполняющих жизнью каждый камень и травинку, попав на Байкал почувствует в он здесь не один. </p>
+								<p>Новосибирск, Красный проспект, 85<br>
+									Клуб OUM.RU<br>
+									+7 (383) 123-45-67</p>
 
-							<p><span class="event__label">Проводят:</span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Павел&nbsp;Коноровский</a></span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Ольга&nbsp;Евдокимова</a></span>
-							</p>
+								<p>
+									Метро Красный проспект. Выйти из метро, повернуть направо и перейти дорогу на светофоре. Далее идти прямо до вывески Клуб OUM.RU.
+								</p>
 
-							<p><span class="event__label">Пожертвование:</span>
-								<span class="event__line">45 000 рублей</span>
-							</p>
-
-							<br>
-
-							<div class="txt-to-center">
-								<a href="#" class="button">Подробнее</a>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-				<div class="bg-section" style="background-image: url(img/section-1.jpg)">
-					<div class="bg-section__body">
-						<div class="trans-button trans-button_bg">
-							<div class="trans-button__txt">Семинары</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="page__section">
-
-					<div class="event event_width-legend_more event_space-bottom_none">
-						<div class="event__photo">
-							<div class="event__photo-inner">
-								<img src="img/content/events/event-1.jpg" height="341" width="377" alt="" class="event__img">
-								<div class="event__legend">
-									<div class="event__date">10.09.2016</div>
-									<div class="event__location">Москва</div>
-								</div>
 							</div>
 						</div>
-						<div class="event__desc">
-							<h2>Медитация для начинающих</h2>
-
-							<p>Медитация для начинающих. Методики воспоминания прошлых жизней: знакомство с методиками медитации, которые можно использовать в повседневной жизни; изучение техник, которые помогут сделать медитацию доступной; <br>
-							практическое применение методик воспоминания прошлых жизней.</p>
-
-							<p><span class="event__label">Проводят:</span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Андрей&nbsp;Верба</a></span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Екатерина&nbsp;Андросова</a></span>
-							</p>
-
-							<p><span class="event__label">Пожертвование:</span>
-								<span class="event__line">3 000 рублей</span>
-							</p>
-
-							<br>
-
-							<div class="txt-to-center">
-								<a href="#" class="button">Подробнее</a>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="separator"></div>
-
-					<div class="event event_width-legend_more event_space-bottom_none">
-						<div class="event__photo">
-							<div class="event__photo-inner">
-								<img src="img/content/events/event-3.jpg" height="341" width="377" alt="" class="event__img">
-								<div class="event__legend">
-									<div class="event__date">2.05.2016</div>
-									<div class="event__location">Новосибирск</div>
-								</div>
-							</div>
-						</div>
-						<div class="event__desc">
-							<h2>Медитация для начинающих</h2>
-
-							<p>Цель семинара: Познакомится с йогическими способами, которые помогут улучшить качество жизни. Интенсивная практика асан, пранаяма и мантра. Для любого уровня подготовки. Особенно для людей, у которых путь в йоге только начинается :) </p>
-
-							<p><span class="event__label">Проводят:</span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Ольга&nbsp;Бедункова</a></span>
-							</p>
-
-							<p><span class="event__label">Пожертвование:</span>
-								<span class="event__line">800 рублей</span>
-							</p>
-
-							<br>
-
-							<div class="txt-to-center">
-								<a href="#" class="button">Подробнее</a>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-
-				<div class="bg-section" style="background-image: url(img/section-4.jpg)">
-					<div class="bg-section__body">
-						<div class="trans-button trans-button_bg">
-							<div class="trans-button__txt">Другие мероприятия</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="page__section">
-
-					<div class="event event_width-legend_more event_space-bottom_none">
-						<div class="event__photo">
-							<div class="event__photo-inner">
-								<img src="img/content/events/event-4.jpg" height="341" width="377" alt="" class="event__img">
-								<div class="event__legend">
-									<div class="event__date">16.07-30.08.2016</div>
-									<div class="event__location">Алтай</div>
-								</div>
-							</div>
-						</div>
-						<div class="event__desc">
-							<h2>Медитация для начинающих</h2>
-
-							<p>Медитация для начинающих. Методики воспоминания прошлых жизней: знакомство с методиками медитации, которые можно использовать в повседневной жизни; изучение техник, которые помогут сделать медитацию доступной; <br>
-							практическое применение методик воспоминания прошлых жизней.</p>
-
-							<p><span class="event__label">Проводят:</span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Павел&nbsp;Коноровский</a></span>
-								<span class="event__line">преподаватель клуба OUM.RU <a href="#">Ольга&nbsp;Евдокимова</a></span>
-							</p>
-
-							<p><span class="event__label">Пожертвование:</span>
-								<span class="event__line">cвободные пожертвования</span>
-							</p>
-
-							<br>
-
-							<div class="txt-to-center">
-								<a href="#" class="button">Подробнее</a>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
 				
+					</div>
+				</div>
+
+
+				<div class="map map_space_bottom">
+					<div class="map__body">
+						<div id="map2" style="width: 100%; height: 400px"></div>
+						<script type="text/javascript">
+						    ymaps.ready(init);
+						    var myMap2;
+						
+						    function init(){     
+						        myMap2 = new ymaps.Map ("map2", {
+						            center: [61.00416525207393,69.04860899999996],
+						            zoom: 16
+						        }),
+									
+							    myMap2.controls
+							        // Кнопка изменения масштаба.
+							       .add('zoomControl', { left: 5, top: 5 })
+							        // Список типов карты
+							       .add('typeSelector', { right: 100, top: 5 })
+							        // Стандартный набор кнопок
+							       .add('mapTools', { left: 35, top: 5 }),
+									
+						        myPlacemark2 = new ymaps.Placemark([61.00416525207393,69.04860899999996], {
+						            // Свойства.
+						            hintContent: 'ул. Чехова 67'
+						        }, {
+						            // Опции.
+						            // Своё изображение иконки метки.
+						            iconImageHref: 'img/map-icon.png',
+						            // Размеры метки.
+						            iconImageSize: [39, 38],
+						            // Смещение левого верхнего угла иконки относительно
+						            // её "ножки" (точки привязки).
+						            iconImageOffset: [0, 0]
+						        });
+									
+							    // Добавляем все метки на карту.
+							    myMap2.geoObjects
+							        .add(myPlacemark2)
+									
+						    }
+						</script>
+					</div>
+				</div>
+
+		
 			</div>
 
 
