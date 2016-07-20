@@ -2517,6 +2517,24 @@ textarea.input {
 ------------------------------------------END--- */
 
 
+/*  content-img
+------------------------------------------------ */
+
+	.content-img {
+		&_left {
+			float: left;
+			margin-right: 23px;
+			margin-bottom: 10px;
+			@media screen and (width <= $event_sm) {
+				float: none;
+			}
+		}
+	}
+	
+/* content-img
+------------------------------------------END--- */
+
+
 /* block
 ------------------------------------------------
 	

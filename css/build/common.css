@@ -3752,6 +3752,29 @@ textarea.input {
 ------------------------------------------END--- */
 
 
+/*  content-img
+------------------------------------------------ */
+
+	.content-img {
+	}
+
+	.content-img_left {
+  float: left;
+  margin-right: 23px;
+  margin-bottom: 10px;
+}
+
+	@media screen and (max-width: 600px) {
+
+  .content-img_left {
+    float: none;
+  }
+}
+	
+/* content-img
+------------------------------------------END--- */
+
+
 /* block
 ------------------------------------------------
 	
