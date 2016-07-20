@@ -1924,6 +1924,15 @@ textarea.input {
 		padding: 0;
 		display: inline-block;
 	}
+
+	&__i.is-active &__a {
+		background: $main_color;
+		color: #fff;
+
+		&:hover {
+			border-color: $main_color;
+			}
+	}
 		
 	&__a {
 		display: block;
@@ -2468,6 +2477,43 @@ textarea.input {
 	}
 	
 /* skype-icon
+------------------------------------------END--- */
+
+
+/*  articles
+------------------------------------------------ */
+
+	.articles {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -24px;
+
+		&__i {
+			width: 50%;
+			margin-bottom: 30px;
+			padding-left: 24px;
+			box-sizing: border-box;
+			@media screen and (width <= $mq_smr) {
+				width: auto;
+			}
+		}
+
+		&__h {
+			margin-bottom: 20px;
+		}
+
+		&__body {
+			@mixin clearfix;
+		}
+
+		&__img {
+			float: left;
+			margin-right: 12px;
+			margin-bottom: 5px;
+		}
+	}
+	
+/* articles
 ------------------------------------------END--- */
 
 

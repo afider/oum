@@ -3042,6 +3042,15 @@ textarea.input {
   display: inline-block;
 }
 
+.page-nav__i.is-active .page-nav__a {
+  background: #f26c36;
+  color: #fff;
+}
+
+.page-nav__i.is-active .page-nav__a:hover {
+  border-color: #f26c36;
+}
+
 .page-nav__a {
   display: block;
   border-radius: 50%;
@@ -3687,6 +3696,59 @@ textarea.input {
 	}
 	
 /* skype-icon
+------------------------------------------END--- */
+
+
+/*  articles
+------------------------------------------------ */
+
+	.articles {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		margin-left: -24px
+	}
+
+	.articles__i {
+  width: 50%;
+  margin-bottom: 30px;
+  padding-left: 24px;
+  box-sizing: border-box;
+}
+
+	@media screen and (max-width: 500px) {
+
+  .articles__i {
+    width: auto;
+  }
+}
+
+	.articles__h {
+  margin-bottom: 20px;
+}
+
+	.articles__body {
+	}
+
+	.articles__body::before, .articles__body::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+	.articles__body::after {
+  clear: both;
+}
+
+	.articles__img {
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 5px;
+}
+	
+/* articles
 ------------------------------------------END--- */
 
 
